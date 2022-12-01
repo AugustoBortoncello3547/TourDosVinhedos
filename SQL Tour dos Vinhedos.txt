@@ -1,0 +1,103 @@
+﻿CREATE TABLE city (
+        id INTEGER NOT NULL,
+        name varchar(255),
+        uf char(2),
+        PRIMARY KEY(id)
+);
+
+
+CREATE TABLE person (
+        id INTEGER NOT NULL,
+        name varchar(255),
+        email varchar(255),
+        password varchar(255),
+        PRIMARY KEY(id)
+);
+
+
+CREATE TABLE client (
+        id INTEGER NOT NULL,
+        person_id INTEGER NOT NULL,
+        country varchar(50),
+        FOREIGN KEY (person_id)
+        REFERENCES person(id),
+        PRIMARY KEY (id)
+);
+
+
+CREATE TABLE employee (
+        id INTEGER NOT NULL,
+        person_id INTEGER NOT NULL,
+        job varchar(255),
+        FOREIGN KEY (person_id)
+        REFERENCES person(id),
+        PRIMARY KEY (id)
+);
+
+
+CREATE TABLE location_type (
+        id INTEGER NOT NULL,
+        name varchar(255),
+        description varchar(255),
+        PRIMARY KEY (id)
+);
+
+
+CREATE TABLE place (
+        id INTEGER NOT NULL,
+        name varchar(255),
+        description text,
+        location_type_id INTEGER NOT NULL,
+        FOREIGN KEY (location_type_id)
+        REFERENCES location_type(id),
+        PRIMARY KEY (id)
+);
+
+
+CREATE TABLE highlight (
+        id INTEGER NOT NULL,
+        name varchar(255),
+        PRIMARY KEY (id)
+);
+
+
+CREATE TABLE road_map (
+        id INTEGER NOT NULL,
+        name varchar(255),
+        description text,
+        created_at date,
+        PRIMARY KEY (id)
+);
+
+
+CREATE TABLE location_rating (
+        id INTEGER NOT NULL,
+        description varchar(255),
+        rating INTEGER,
+        location_id INTEGER NOT NULL,
+        FOREIGN KEY (location_id)
+        REFERENCES place(id),
+        PRIMARY KEY (id)
+);
+
+
+CREATE TABLE road_map_rating (
+        id INTEGER NOT NULL,
+        description varchar(255),
+        rating INTEGER,
+        road_map_id INTEGER NOT NULL,
+        FOREIGN KEY (road_map_id)
+        REFERENCES road_map(id),
+        PRIMARY KEY (id)
+);
+
+
+CREATE TABLE location_photo (
+        id INTEGER NOT NULL,
+        name varchar(255),
+        url varchar(255),
+        location_id INTEGER NOT NULL,
+        FOREIGN KEY (location_id)
+        REFERENCES place(id),
+        PRIMARY KEY (id)
+);
