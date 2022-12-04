@@ -1,6 +1,17 @@
 <?php 
 
-namespace augustobortoncello\DB;
+/*
+Exemplo de como utilziar a classe
+fucntion getUsuario($idUsuario){
+
+	$sql = new Sql();
+
+	$results = $sql->select("SELECT * FROM usuarios WHERE idUsuario = :idUsuario", [
+		':idUsuario' => $idUsuario,
+	]);
+
+}
+*/
 
 class Sql {
 
