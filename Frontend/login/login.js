@@ -11,7 +11,7 @@ $(document).ready(() => {
 		dadosLogin = JSON.stringify(usuario);
 
 		$.ajax({
-			url: '../../Backend/Backend.php',
+			url: '../../Backend/BackendLogin.php',
 			type: 'POST',
 			data: {data: dadosLogin},
 			success: function(result){

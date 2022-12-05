@@ -18,27 +18,27 @@
     <main class = "container">
       <div>
         <h4 class="mb-3">Ficha de cadastro</h4>
-            <form>
+            <form id="formCadastro">
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Nome completo</label>
-                  <input type="text" class="form-control" id="Name" placeholder="" value="" required>
+                  <input type="text" id="nome" class="form-control" id="Name" placeholder="" value="" required>
                 </div>
     
         
                 <div class="col-sm-6">
                   <label for="email" class="form-label">Email <span class="text-muted"></label>
-                  <input type="email" class="form-control" id="email" placeholder="teste@exemplo.com" required>
+                  <input type="email" id="email" class="form-control" id="email" placeholder="teste@exemplo.com" required>
                 </div>
                 
                 <div class="col-sm-6">
                     <label for="address" class="form-label">Data de nascimento</label>
-                    <input type="date" class="form-control" id="date" required>
+                    <input type="date" id="dataNasc" class="form-control" id="date" required>
                 </div>
 
                 <div>
                     <label for="address" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="address" required>
+                    <input type="password" id="password" class="form-control" id="address" required>
                   </div>
                  
                   <div>
@@ -48,7 +48,7 @@
 
               <hr class="my-4">
 
-              <button class="w-100 btn btn-primary btn-lg" type="submit">Cadaste-se</button>
+              <button class="w-100 btn btn-primary btn-lg" type="submit">Cadastre-se</button>
             </form>
           </div>
         </div>
@@ -56,8 +56,8 @@
     
       <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">Copyright © 2022 Tour dos Vinhedos</p>
-        
       </footer>
-       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="cadastro.js"></script>
       </body>
 </html>
