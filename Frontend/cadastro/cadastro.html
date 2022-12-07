@@ -18,7 +18,7 @@
     <main class = "container">
       <div>
         <h4 class="mb-3">Ficha de cadastro</h4>
-            <form id="formCadastro">
+            <form id="formCadastro" onsubmit="return false;">
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Nome completo</label>
@@ -44,6 +44,16 @@
                   <div>
                     <input type="checkbox" id="e_funcionario" name="e_funcionario">
                     <label for="e_funcionario">É funcionario</label>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="country" class="form-label">País</label>
+                    <input type="text" id="country" class="form-control"  placeholder="" value="" required>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="job" class="form-label">Ocupação</label>
+                    <input type="text" id="job" class="form-control" placeholder="" value="" required>
                   </div>
 
               <hr class="my-4">

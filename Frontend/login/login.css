@@ -11,6 +11,8 @@ body {
 	background-color: #f5f5f5;
 }
 
+
+
 .form-signin {
 	max-width: 330px;
 	padding: 15px;
@@ -81,4 +83,9 @@ body {
 	text-align: center;
 	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
+}
+
+#error-response {
+	color: red !important;
+	margin-bottom: 5px;
 }

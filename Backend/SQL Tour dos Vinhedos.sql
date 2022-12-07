@@ -1,5 +1,5 @@
 CREATE TABLE person (
-        id SERIAL PRIMARY KEY,
+        id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
         name varchar(255),
         email varchar(255),
         password varchar(255)
@@ -7,7 +7,7 @@ CREATE TABLE person (
 
 
 CREATE TABLE client (
-        id SERIAL PRIMARY KEY,
+        id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
         person_id INTEGER NOT NULL,
         country varchar(50),
         FOREIGN KEY (person_id)
@@ -16,7 +16,7 @@ CREATE TABLE client (
 
 
 CREATE TABLE employee (
-        id SERIAL PRIMARY KEY,
+       	id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
         person_id INTEGER NOT NULL,
         job varchar(255),
         FOREIGN KEY (person_id)
