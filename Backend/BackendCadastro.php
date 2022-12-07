@@ -12,7 +12,9 @@ $name = $dadosCadastro['nome'];
 $email = $dadosCadastro['email'];
 $password = $dadosCadastro['password'];
 
-$sql = "INSERT INTO person (name, email, password) VALUES ('$name','$email','$password')";
+$encrypt =  md5('tour_dos_vinhedos_secret' . $password);
+
+$sql = "INSERT INTO person (name, email, password) VALUES ('$name','$email','$encrypt')";
 $person_id = $DB->insert($sql);
 
 
